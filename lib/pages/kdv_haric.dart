@@ -45,7 +45,7 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                       labelText: 'Kdv Dahil Fiyat',
                       fillColor: Colors.black),
                 ),
-              ),
+               ),
             ),
             Card(
               shadowColor: Colors.black,
