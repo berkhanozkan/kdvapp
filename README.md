@@ -1,6 +1,6 @@
 # kdv_app
 
-A new Flutter project.
+First simple calculation app. 
 
 ## Getting Started
 
