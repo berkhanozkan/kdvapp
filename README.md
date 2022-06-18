@@ -1,6 +1,6 @@
 # kdv_app
 
-First simple calculation app. 
+Basit bir KDV hesaplama uygulaması.
 
 ## Getting Started
 
