@@ -1,5 +1,5 @@
 # kdv_app
-
+İlk flutter app.
 Basit bir KDV hesaplama uygulaması.
 
 ## Getting Started
