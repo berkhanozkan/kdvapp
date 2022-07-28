@@ -1,7 +1,7 @@
 # kdv_app
-İlk flutter app.
+Flutter ile geliştirildi.
 Basit KDVli ve KDVsiz fiyat hesaplama uygulaması.
-- Girilen fiyatın KDVye bağlı olarak KDV'li ve KDV'siz sonucunu görebilirsiniz.
+- Girilen fiyatın KDVye bağlı olarak KDV'li / KDV'siz sonucunu görebilirsiniz.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
