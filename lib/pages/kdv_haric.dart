@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kdv_app/core/constants/page_constant.dart';
 
 class KDVHaricFiyatScreen extends StatefulWidget {
   const KDVHaricFiyatScreen({Key? key}) : super(key: key);
@@ -16,8 +17,8 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
-        title: Text(
-          'KDV Hariç Fiyatı Hesapla',
+        title: const Text(
+          PageConstant.kdvHaricFiyatHesapla,
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.amber.shade100,
@@ -29,7 +30,7 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
             Card(
               shadowColor: Colors.black,
               elevation: 20,
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               color: Colors.amber.shade100,
               child: Padding(
                 padding:
@@ -37,20 +38,20 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                 child: TextFormField(
                   keyboardType: TextInputType.number,
                   controller: kdvDahilFiyat,
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                       hintStyle:
                           TextStyle(fontSize: 20.0, color: Colors.redAccent),
                       border: UnderlineInputBorder(),
-                      labelText: 'Kdv Dahil Fiyat',
+                      labelText: PageConstant.kdvDahilFiyat,
                       fillColor: Colors.black),
                 ),
-               ),
+              ),
             ),
             Card(
               shadowColor: Colors.black,
               elevation: 20,
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               color: Colors.amber.shade100,
               child: Padding(
                 padding:
@@ -60,7 +61,7 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                   controller: kdvOrani,
                   decoration: const InputDecoration(
                     border: UnderlineInputBorder(),
-                    labelText: 'KDV Oranı (%)',
+                    labelText: PageConstant.kdvOrani,
                   ),
                 ),
               ),
@@ -74,7 +75,7 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         shadowColor: Colors.black,
-                        side: BorderSide(color: Colors.black, width: 1),
+                        side: const BorderSide(color: Colors.black, width: 1),
                         elevation: 20,
                         primary: Colors.amber.shade100),
                     onPressed: () {
@@ -83,7 +84,7 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                             (1 + (int.parse(kdvOrani.text) / 100));
                       });
                     },
-                    child: Text(
+                    child: const Text(
                       'Hesapla',
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     )),
@@ -93,7 +94,7 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         shadowColor: Colors.black,
-                        side: BorderSide(color: Colors.black, width: 1),
+                        side: const BorderSide(color: Colors.black, width: 1),
                         elevation: 20,
                         primary: Colors.amber.shade100),
                     onPressed: () {
@@ -103,15 +104,15 @@ class _KDVHaricFiyatScreenState extends State<KDVHaricFiyatScreen> {
                         _kdvsizFiyatSonuc = 0;
                       });
                     },
-                    child: Text(
-                      'Temizle',
+                    child: const Text(
+                      PageConstant.temizle,
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     )),
               ],
             ),
             Text(
-              _kdvsizFiyatSonuc.toStringAsFixed(2) + ' ₺',
-              style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
+              _kdvsizFiyatSonuc.toStringAsFixed(2) + PageConstant.turkishLira,
+              style: const TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
             ),
           ],
         ),

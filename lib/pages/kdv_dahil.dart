@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants/page_constant.dart';
+
 class KdvDahilFiyatScreen extends StatefulWidget {
   const KdvDahilFiyatScreen({Key? key}) : super(key: key);
 
@@ -16,8 +18,8 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
-        title: Text(
-          'KDV Dahil Fiyatı Hesapla',
+        title: const Text(
+          PageConstant.kdvDahilFiyatHesapla,
           style: TextStyle(color: Colors.black),
         ),
         backgroundColor: Colors.amber.shade100,
@@ -29,7 +31,7 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
             Card(
               shadowColor: Colors.black,
               elevation: 20,
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               color: Colors.amber.shade100,
               child: Padding(
                 padding:
@@ -37,12 +39,12 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
                 child: TextFormField(
                   keyboardType: TextInputType.number,
                   controller: kdvHaricFiyat,
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                   decoration: const InputDecoration(
                       hintStyle:
                           TextStyle(fontSize: 20.0, color: Colors.redAccent),
                       border: UnderlineInputBorder(),
-                      labelText: 'Kdv Hariç Fiyat',
+                      labelText: PageConstant.kdvHaricFiyat,
                       fillColor: Colors.black),
                 ),
               ),
@@ -50,7 +52,7 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
             Card(
               shadowColor: Colors.black,
               elevation: 20,
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               color: Colors.amber.shade100,
               child: Padding(
                 padding:
@@ -60,7 +62,7 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
                   controller: kdvOrani,
                   decoration: const InputDecoration(
                     border: UnderlineInputBorder(),
-                    labelText: 'KDV Oranı (%)',
+                    labelText: PageConstant.kdvOrani,
                   ),
                 ),
               ),
@@ -74,7 +76,7 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         shadowColor: Colors.black,
-                        side: BorderSide(color: Colors.black, width: 1),
+                        side: const BorderSide(color: Colors.black, width: 1),
                         elevation: 20,
                         primary: Colors.amber.shade100),
                     onPressed: () {
@@ -85,8 +87,8 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
                                 int.parse(kdvHaricFiyat.text);
                       });
                     },
-                    child: Text(
-                      'Hesapla',
+                    child: const Text(
+                      PageConstant.hesapla,
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     )),
                 ElevatedButton(
@@ -95,7 +97,7 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
                             borderRadius:
                                 BorderRadius.all(Radius.circular(10))),
                         shadowColor: Colors.black,
-                        side: BorderSide(color: Colors.black, width: 1),
+                        side: const BorderSide(color: Colors.black, width: 1),
                         elevation: 20,
                         primary: Colors.amber.shade100),
                     onPressed: () {
@@ -105,15 +107,15 @@ class _KdvDahilFiyatScreenState extends State<KdvDahilFiyatScreen> {
                         _kdvliFiyatSonuc = 0;
                       });
                     },
-                    child: Text(
-                      'Temizle',
+                    child: const Text(
+                      PageConstant.temizle,
                       style: TextStyle(fontSize: 20, color: Colors.black),
                     )),
               ],
             ),
             Text(
-              _kdvliFiyatSonuc.toStringAsFixed(2) + ' ₺',
-              style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
+              _kdvliFiyatSonuc.toStringAsFixed(2) + PageConstant.turkishLira,
+              style: const TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
             ),
           ],
         ),
